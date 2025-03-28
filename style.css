@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Yanone+Kaffeesatz:wght@200..700&display=swap");
+:root {
+  /* 🎨 الألوان - الوضع الفاتح */
+  --primary-color: #0077ff; /* الأزرق الأساسي */
+  --secondary-color: #ffd700; /* أصفر مشرق */
+  --accent-color: #ff4081; /* لون مميز */
+  --background-color: #6cb4ee; /* خلفية فاتحة */
+  --text-color: #212121; /* نص داكن */
+  --border-color: #6cb4ee; /* لون الحواف والأزرار */
+
+  /* ✅ الألوان الإضافية */
+  --success-color: #4caf50;
+  --warning-color: #ffc107;
+  --danger-color: #f44336;
+  --info-color: #2196f3;
+
+  /* ✍️ الخطوط */
+  --font-primary: "Ubuntu", sans-serif;
+  --font-secondary: "Roboto", sans-serif;
+  --font-size-base: 16px;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+
+  /* 📏 المسافات */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  /* 🖼️ الحدود والزوايا */
+  --border-radius-sm: 6px;
+  --border-radius-md: 12px;
+  --border-radius-lg: #fff 3px solid;
+  /* 🌟 الظلال */
+  --shadow-sm: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* 📱 دعم الشاشات المختلفة */
+@media (max-width: 768px) {
+  :root {
+    --font-size-base: 14px;
+    --spacing-md: 12px;
+    --spacing-lg: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --font-size-base: 12px;
+    --spacing-md: 10px;
+    --spacing-lg: 16px;
+  }
+}
+
+.dark {
+  /* 🌙 ألوان الوضع المظلم */
+  --primary-color: #1e3a8a; /* أزرق داكن */
+  --secondary-color: #ff8c00; /* برتقالي غروب الشمس */
+  --accent-color: #d6d6d6; /* رمادي فاتح */
+  --background-color: #3c3a3a; /* خلفية داكنة */
+  --text-color: #e0e0e0; /* نص فاتح */
+ --border-radius-lg: #00ff87 3px solid; /* لون الحواف والأزرار في الوضع المظلم */
+
+  /* 🌙 ألوان إضافية للوضع الداكن */
+  --success-color: #81c784;
+  --warning-color: #ffb74d;
+  --danger-color: #e57373;
+  --info-color: #64b5f6;
+
+  /* 🌙 الظلال في الوضع الداكن */
+  --shadow-sm: 0px 2px 6px rgba(255, 255, 255, 0.1);
+  --shadow-md: 0px 4px 10px rgba(255, 255, 255, 0.15);
+  --shadow-lg: 0px 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-color);
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+header .logo-first-bar {
+  font-size: 20px;
+  font-family:var(--font-primary);
+  color: var(--text-color);
+}
+
+header nav .first-btn {
+  height: 40px;
+  width: 100px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(96deg, #fff, #fff);
+  font-family: var(--font-primary);
+}
+header nav .second-btn {
+  height: 30px;
+  width: 60px;
+  font-size: 20px;
+  border: none;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  background-color: var(--bg-color);
+}
+main .serives-box {
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  margin: 7px 0 70px 0;
+  flex-wrap: 1;
+}
+main .serives-box .box {
+  width: 60px;
+  height: 60px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+  border: var(--border);
+}
+main .serives-box .box a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+  text-decoration: none;
+  color: var(--text-color);
+  font-family: var(--font-primary);
+}
+main .serives-box .box a img {
+  width: 40px;
+}
+main .serives-box .box a span {
+  margin-top: 20px;
+  font-size: 14px;
+}
+main .serives-box .box5 {
+  background-color: #ff5757;
+}
+main .serives-box .box4 {
+  background-color: #131721;
+}
+main .serives-box .box2 {
+  background-color: #181c25;
+}
+main .serives-box .box1 {
+  background-color: #151733;
+}
+.search-continer {
+  width: 90%;
+  height: auto;
+  background-color: var(--bg-color);
+  border-radius: 20px;
+}
+.search-continer .box-search {
+  display: flex;
+  border: var(--border-radius-lg);
+  
+  height: 60px;
+  border-radius: 20px 10px 10px 20px;
+}
+.search-continer input {
+  width: 90%;
+  background-color: var(--bg-color);
+  border: none;
+  border-radius: 20px 0 0 20px;
+  outline: none;
+  padding-left: 10px;
+  font-size: 20px;
+  text-align: center;
+}
+.search-continer button {
+  width: 10%;
+  background: linear-gradient(96deg, #fff, #fff);
+  border: none;
+  border-radius: 5px 10px 10px 5px;
+  margin: 5px 5px 5px 0;
+}
+
+@media (max-width: 480px) {
+  main {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  main {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  .box1 {
+    display: none;
+  }
+  .search-continer {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 30px;
+  }
+  .search-continer input {
+    width: 80%;
+  }
+  .search-continer button {
+    width: 20%;
+  }
+}
+
+
+
+
+
+
