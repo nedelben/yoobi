@@ -176,6 +176,7 @@ main .serives-box .box1 {
   height: auto;
   background-color: var(--bg-color);
   border-radius: 20px;
+  margin-bottom:20px;
 }
 .search-continer .box-search {
   display: flex;
