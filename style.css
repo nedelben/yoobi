@@ -4,7 +4,7 @@
   --primary-color: #0077ff; /* الأزرق الأساسي */
   --secondary-color: #ffd700; /* أصفر مشرق */
   --accent-color: #ff4081; /* لون مميز */
-  --background-color: #6cb4ee; /* خلفية فاتحة */
+  --background-color: #ADD8E6; /* خلفية فاتحة */
   --text-color: #212121; /* نص داكن */
   --border-color: #6cb4ee; /* لون الحواف والأزرار */
 
@@ -31,7 +31,7 @@
   /* 🖼️ الحدود والزوايا */
   --border-radius-sm: 6px;
   --border-radius-md: 12px;
-  --border-radius-lg: #fff 3px solid;
+  --border-radius-lg: #333 3px solid;
   /* 🌟 الظلال */
   --shadow-sm: 0px 2px 6px rgba(0, 0, 0, 0.1);
   --shadow-md: 0px 4px 10px rgba(0, 0, 0, 0.15);
@@ -92,30 +92,26 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 10px 20px;
+  
 }
 header .logo-first-bar {
-  font-size: 20px;
-  font-family:var(--font-primary);
-  color: var(--text-color);
-}
-
-header nav .first-btn {
-  height: 40px;
-  width: 100px;
-  font-size: 18px;
-  border-radius: 10px;
-  border: none;
-  background: linear-gradient(96deg, #fff, #fff);
+  display: flex;
+  align-items: center;
+  gap: 15px;
   font-family: var(--font-primary);
+  
+}
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+header nav .first-btn {
+  
 }
 header nav .second-btn {
-  height: 30px;
-  width: 60px;
-  font-size: 20px;
-  border: none;
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  
 }
 main {
   display: flex;
@@ -208,7 +204,7 @@ main .serives-box .box1 {
     flex-direction: column-reverse;
     justify-content: center;
   }
-  .box3 {
+  .box1 {
     display: none;
   }
   .search-continer {
