@@ -1,60 +1,39 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Yanone+Kaffeesatz:wght@200..700&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Yanone+Kaffeesatz:wght@200..700&display=swap');
+
+/* 🟢 تعريف جميع المتغيرات الأساسية للتصميم */
 :root {
-  /* 🎨 الألوان - الوضع الفاتح */
-  --primary-color: #0077ff; /* الأزرق الأساسي */
-  --secondary-color: #ffba08; /* أصفر مشرق */
-  --accent-color: #ff4081; /* لون مميز */
-  --background-color: #add8e6; /* خلفية فاتحة */
-  --text-color: #212121; /* نص داكن */
-  --border-color: #6cb4ee; /* لون الحواف والأزرار */
+  /* 🎨 الألوان الأساسية */
+  --primary-color: #1e3a8a; /* لون رئيسي - يستخدم للعناوين والأزرار */
+  --secondary-color: #60a5fa; /* لون ثانوي - للأزرار عند التحويم والعناصر التفاعلية */
+  --background-color: #bee3f8; /* خلفية الصفحة */
+  --text-color: #1e293b; /* لون النص الأساسي */
+  --card-background: #ffffff; /* لون خلفية الكروت */
+  --card-shadow: rgba(0, 0, 0, 0.1); /* ظل للكروت */
+  --border-color: #2563eb; /* لون الحدود لعناصر الإدخال */
 
-  /* ✅ الألوان الإضافية */
-  --success-color: #4caf50;
-  --warning-color: #ffc107;
-  --danger-color: #f44336;
-  --info-color: #2196f3;
+  /* 🔠 الخطوط */
+  --font-family: "Ubuntu", sans-serif; /* الخط الأساسي */
+  --font-size-normal: 16px; /* حجم النص العادي */
+  --font-size-large: 20px; /* حجم النص الكبير للعناوين */
 
-  /* ✍️ الخطوط */
-  --font-primary: "Ubuntu", sans-serif;
-  --font-secondary: "Roboto", sans-serif;
-  --font-size-base: 16px;
-  --font-weight-normal: 400;
-  --font-weight-bold: 700;
+  /* 🟦 الأزرار */
+  --button-background: #2563eb; /* خلفية الأزرار */
+  --button-hover: #1d4ed8; /* لون عند تمرير الماوس */
+  --button-text-color: #ffffff; /* لون نص الأزرار */
 
-  /* 📏 المسافات */
-  --spacing-xs: 4px;
-  --spacing-sm: 8px;
-  --spacing-md: 16px;
-  --spacing-lg: 24px;
-  --spacing-xl: 32px;
+  /* 🔳 مربعات الإدخال */
+  --input-background: #ffffff; /* خلفية الإدخال */
+  --input-border: #1e3a8a; /* لون حدود الإدخال */
+  --input-text-color: #000000; /* لون النص داخل الإدخال */
 
-  /* 🖼️ الحدود والزوايا */
-  --border-radius-sm: 6px;
-  --border-radius-md: 12px;
-  --border-radius-lg: #333 3px solid;
-  /* 🌟 الظلال */
-  --shadow-sm: 0px 2px 6px rgba(0, 0, 0, 0.1);
-  --shadow-md: 0px 4px 10px rgba(0, 0, 0, 0.15);
-  --shadow-lg: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  /* 🔵 تصميم الكروت */
+  --card-border-radius: 10px; /* تدوير زوايا الكروت */
+  --card-padding: 15px; /* المسافة الداخلية للكروت */
+
+  /* 🛠 تأثيرات */
+  --transition-speed: 0.3s; /* سرعة التأثيرات */
 }
-
-/* 📱 دعم الشاشات المختلفة */
-@media (max-width: 768px) {
-  :root {
-    --font-size-base: 14px;
-    --spacing-md: 12px;
-    --spacing-lg: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  :root {
-    --font-size-base: 12px;
-    --spacing-md: 10px;
-    --spacing-lg: 16px;
-  }
-}
-
 .dark {
   /* 🌙 ألوان الوضع المظلم */
   --primary-color: #1e3a8a; /* أزرق داكن */
@@ -98,23 +77,26 @@ header .logo-first-bar {
   display: flex;
   align-items: center;
   gap: 15px;
-  font-family: var(--font-primary);
+  font-family: var(--font-family);
 }
 
-header nav{
+header nav {
   display: flex;
   display: flex;
   align-items: center;
   gap: 15px;
-  font-family: var(--font-primary);
+  font-family: var(--font-family);
 }
-header nav a{
-    text-decoration: none;
-    font-size: 20px;
-    background-color: #212121;
-    padding: 5px 10px;
-    border-radius: 5px;
-    color: #f9f9f9f9;
+header nav a {
+  text-decoration: none;
+  font-size: 20px;
+  background-color: var(--button-background);
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: var(--button-text-color);
+}
+header nav a:hover{
+    background-color: var(--button-hover);
   }
 header .second-btn {
   font-size: 20px;
@@ -150,7 +132,7 @@ main .serives-box .box a {
   padding-top: 10px;
   text-decoration: none;
   color: var(--text-color);
-  font-family: var(--font-primary);
+  font-family: var(--font-family);
 }
 main .serives-box .box a img {
   width: 40px;
@@ -180,13 +162,14 @@ main .serives-box .box1 {
 }
 .search-continer .box-search {
   display: flex;
-  border: var(--border-radius-lg);
+  border: var(--border-color) 3px solid;
 
   height: 60px;
   border-radius: 10px;
   margin-bottom: 20px;
 }
 .search-continer input {
+    font-family: var(--font-family);
   width: 90%;
   background-color: var(--bg-color);
   border: none;
@@ -202,17 +185,17 @@ main .serives-box .box1 {
   border: none;
   border-radius: 10px;
   margin: 5px 5px 5px 0;
+  font-family: var(--font-family);
 }
 .info {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 0 10px;
 }
 .info a {
   text-decoration: none;
   color: #333;
-  font-family: var(--font-primary);
+  font-family: var(--font-family);
 }
 @media (max-width: 480px) {
   main {
