@@ -207,7 +207,7 @@ main .serives-box .box1 {
     flex-direction: column-reverse;
     justify-content: center;
   }
-  .box3 {
+  .box3 , box2{
     display: none;
   }
   .search-continer {
